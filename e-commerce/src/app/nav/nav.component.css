@@ -1,0 +1,38 @@
+.main-navigation {
+  background-color: #242424;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.212);
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-list-item {
+  border-right: 1px solid #bbb;
+  float: left;
+}
+
+.nav-list-item:last-child {
+  border-right: none;
+}
+
+.nav-list-button {
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-list-button:hover {
+  background-color: #1976d2af;
+}
+
+.active-nav-list-button {
+  background-color: #1976d2af;
+}
