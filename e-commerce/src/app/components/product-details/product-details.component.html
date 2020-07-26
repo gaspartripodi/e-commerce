@@ -1,0 +1,26 @@
+<section class="product-details">
+  <header>
+    <h2 class="page-section-title">Product Details</h2>
+  </header>
+  <div *ngIf="product">
+    <img class="product-details-image" [src]="product.image">
+    <img *ngIf="!product.image" class="product-details-image" src="assets/images/phone-no-image.jpg"
+      alt="product-image">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price | currency }}</h4>
+    <p>{{ product.description }}</p>
+    <div class="product-buttons">
+      <button class="button" (click)="share(product.name)">
+        Share
+      </button>
+      <app-product-alerts [product]="product" (notify)="onNotify(product.name)">
+      </app-product-alerts>
+      <div class="product-buy-section">
+        <select name="productQuantity" [(ngModel)]="productQuantity">
+          <option [value]="quantity" *ngFor="let quantity of productStock">{{quantity}}</option>
+        </select>
+        <button class="button" (click)="addToCart(product, productQuantity)">Buy</button>
+      </div>
+    </div>
+  </div>
+</section>

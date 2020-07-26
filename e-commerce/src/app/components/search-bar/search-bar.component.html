@@ -1,0 +1,7 @@
+<div class="search-bar-container">
+  <mat-icon class="search-icon">search</mat-icon>
+  <input class="search-bar" type="text" placeholder="Name of the product" #searchBox id="search-box"
+    (input)="search(searchBox.value)" />
+</div>
+
+<app-store [products]="products$ | async"></app-store>

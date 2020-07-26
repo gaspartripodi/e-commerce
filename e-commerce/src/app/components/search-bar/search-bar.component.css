@@ -1,0 +1,26 @@
+.search-bar-container {
+  margin: 0 auto;
+}
+
+.search-icon {
+  padding-left: 1px;
+  position: relative;
+  vertical-align: middle;
+  left: 35px;
+  color: rgb(119, 107, 107);
+}
+
+.search-bar {
+  padding-left: 30px;
+  width: 550px;
+}
+
+.search-bar-container:hover .search-icon {
+  color: #1976d2;
+}
+
+@media (max-width: 700px) {
+  .search-bar {
+    width: 300px;
+  }
+}

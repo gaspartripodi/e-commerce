@@ -1,0 +1,15 @@
+<div class="item-content">
+  <div class="screen" [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+    <h2 class="product-name">
+      {{ product.name }}
+    </h2>
+    <h3 class="product-price">
+      {{ product.price | currency }}
+    </h3>
+    <a class="product-description-button" [title]="product.name + ' details'" [routerLink]="['/detail', productId]">
+      Description
+    </a>
+  </div>
+  <img *ngIf="product.image" class="img" [src]="product.image">
+  <img *ngIf="!product.image" class="img" src="assets/images/phone-no-image.jpg">
+</div>

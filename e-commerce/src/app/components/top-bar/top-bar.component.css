@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.top-bar-header {
+  padding: 0 16px;
+  width: 100%;
+  height: 68px;
+  background-color: #FFFFFF;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.212);
+}
+
+.top-bar-logo {
+  text-decoration: none;
+}
+
+.top-bar-icon {
+  color: #1976d2;
+}
+
+.top-bar-logo:hover .top-bar-icon {
+  color: rgb(119, 107, 107);
+}
+
+.top-bar-title {
+  font-size: 32px;
+  font-weight: bolder;
+  color: rgb(216, 27, 27);
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.web-logo {
+  background-color: black;
+}
+
+.cart-button {
+  background-color: #1976d2;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.cart-button .shopping-cart {
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+  .top-bar-title {
+    font-size: 20px;
+  }
+}

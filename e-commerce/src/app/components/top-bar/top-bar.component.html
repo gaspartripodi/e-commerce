@@ -1,0 +1,11 @@
+<header class="top-bar-header">
+  <a href="" class="top-bar-logo">
+  <h1 class="top-bar-title">
+    <mat-icon class="top-bar-icon">eco</mat-icon>
+    E-commerce
+  </h1>
+  </a>
+  <button class="button cart-button" [routerLink]="['/cart']">
+    <mat-icon class="shopping-cart" [matBadge]="itemsQuantity" matBadgeSize="small" matBadgeColor="warn">shopping_cart</mat-icon>
+    Checkout</button>
+</header>

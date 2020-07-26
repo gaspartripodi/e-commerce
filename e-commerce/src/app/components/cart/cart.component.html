@@ -1,0 +1,42 @@
+<section class="page-section">
+  <header>
+    <h2 class="page-section-title">Cart</h2>
+  </header>
+
+  <a class="shipping-button" routerLink="/shipping">Shipping Prices</a>
+
+  <div class="cart-items">
+    <div class="cart-item" *ngFor="let item of items; index as productId">
+      <span>{{ item.product.name }}</span>
+      <span>{{ item.product.price | currency }}</span>
+      <span>Qty: {{ item.quantity }}</span>
+      <button class="button delete-button" (click)="deleteItem(productId)"><i
+          class="material-icons">delete_forever</i></button>
+    </div>
+  </div>
+
+  <p *ngIf="items.length === 0">No items</p>
+
+  <div class="purchase-total">
+    Total = {{total | currency}}
+  </div>
+
+  <form class="purchase-form" *ngIf="items.length !== 0" [formGroup]="checkoutForm"
+    (ngSubmit)="onSubmit(checkoutForm.value)">
+    <div class="form-group">
+      <label class="purchase-form-label" for="name">
+        Name
+      </label>
+      <input class="purchase-form-input" id="name" type="text" formControlName="name">
+    </div>
+
+    <div class="form-group">
+      <label class="purchase-form-label" for="address">
+        Address
+      </label>
+      <input class="purchase-form-input" id="address" type="text" formControlName="address">
+    </div>
+
+    <button class="button" type="submit">Purchase</button>
+  </form>
+</section>

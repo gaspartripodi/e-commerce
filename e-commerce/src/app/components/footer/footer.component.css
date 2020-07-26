@@ -1,0 +1,47 @@
+.page-footer {
+  margin-top: 200px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 4px 2px 4px -1px rgba(0, 0, 0, 0.212);
+}
+
+.creator:hover {
+  text-decoration: none;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+.bottom {
+  background-color: #0a1c2e;
+}
+
+.bottom .copyright {
+  color: #e5e5e5;
+  font-weight: 600;
+}
+
+.copyright .creator {
+  text-decoration: none;
+  color: #f2ff49;
+  margin-left: 3px;
+  padding-right: 3px;
+}
+
+.bottom .content {
+  margin-bottom: 0;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.copyright .content .year {
+  color: #d1caca;
+}
+
+.bottom .copyright .content, .bottom .copyright .creator:hover {
+  color: #6c6d83;
+}
