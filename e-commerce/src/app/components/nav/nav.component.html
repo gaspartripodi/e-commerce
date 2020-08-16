@@ -1,0 +1,12 @@
+<div class="topnav" #topNav id="myTopnav">
+  <a class="nav-list-button" [routerLink]="['/']" routerLinkActive="active-nav-list-button"
+    [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a class="nav-list-button" [routerLink]="['/cart']" routerLinkActive="active-nav-list-button"
+    [routerLinkActiveOptions]="{ exact: true }">Cart</a>
+  <a class="nav-list-button" [routerLink]="['/shipping']" routerLinkActive="active-nav-list-button"
+    [routerLinkActiveOptions]="{ exact: true }">Shipping prices</a>
+  <a class="nav-list-button">Account</a>
+  <a class="nav-list-button">Discounts</a>
+  <a class="nav-list-button">Help</a>
+  <a href="javascript:void(0);" class="icon" (click)="showTopnav()">&#9776;</a>
+</div>

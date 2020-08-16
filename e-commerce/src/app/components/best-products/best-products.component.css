@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+.best-product-caption {
+  height: 400px;
+  padding: 50px;
+  background-image: url("/assets/images/last-products.jpg");
+  color: #ffffff;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.best-product-text {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+@media all and (max-width: 699px) {
+  .best-product-text {
+    font-size: 30px;
+  }
+}
+
+@media all and (max-width: 699px) and (min-width: 520px) {
+  .best-product-text {
+    font-size: 38px;
+  }
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  .best-product-text {
+    font-size: 44px;
+  }
+}
+
+.shop-button {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background-color: transparent;
+  border: 1px solid #dcdcdc;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.shop-button:hover {
+  background-color: transparent;
+}
+
+.shop-button:active {
+  position: relative;
+  top: 1px;
+}

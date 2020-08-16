@@ -1,0 +1,46 @@
+<section>
+  <header>
+    <h2 class="page-section-title">Cart</h2>
+  </header>
+  <a class="shipping-button" routerLink="/shipping">Shipping Prices</a>
+  <div class="cart-items">
+    <div class="container-fluid">
+      <div class="cart-item" *ngFor="let item of items; index as productId">
+        <div class="row">
+          <div class="col-3 col-xl-3">
+            <span>{{ item.product.name }}</span>
+          </div>
+          <div class="col-3 col-xl-3">
+            <span>{{ item.product.price | currency }}</span>
+          </div>
+          <div class="col-3 col-xl-3">
+            <span>Qty: {{ item.quantity }}</span>
+          </div>
+          <div class="col-3 col-xl-3">
+            <button class="button delete-button" (click)="deleteItem(productId)">
+              <i class="delete-icon material-icons">delete_forever
+              </i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <p *ngIf="items.length === 0">No items</p>
+        Total <span class="text-secondary">{{ total | currency }}</span>
+      </div>
+    </div>
+  </div>
+
+  <form class="purchase-form" *ngIf="items.length !== 0" [formGroup]="checkoutForm"
+    (ngSubmit)="onSubmit(checkoutForm.value)">
+    <mat-form-field class="purchase-form-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Ex. Adam Baker" value="Sushi" formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="purchase-form-full-width">
+      <mat-label>Address</mat-label>
+      <input matInput placeholder="Ex. My Street 132" value="Sushi" formControlName="address">
+    </mat-form-field>
+    <button class="button" type="submit">Purchase</button>
+  </form>
+</section>

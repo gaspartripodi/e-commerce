@@ -1,0 +1,21 @@
+<header class="top-bar-header">
+  <a href="" class="top-bar-logo">
+    <h1 class="top-bar-title">ecoshop</h1>
+  </a>
+  <div class="top-bar-buttons">
+    <app-search-bar class="search-bar-component" id="search-bar-component" #searchBarComponent (notify)="notify.emit()">
+    </app-search-bar>
+    <button class="button top-bar-button search-button" (click)="showSearchBar()">
+      <mat-icon class="search_icon" id="search-icon" #searchIcon>search
+      </mat-icon>
+    </button>
+    <button class="button top-bar-button account-button">
+      <mat-icon class="account_box">account_box
+      </mat-icon>
+    </button>
+    <button class="button top-bar-button cart-button" [routerLink]="['/cart']">
+      <mat-icon class="shopping-cart" [matBadge]="itemsQuantity" matBadgeSize="small" matBadgeColor="warn">shopping_cart
+      </mat-icon>
+    </button>
+  </div>
+</header>

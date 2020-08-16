@@ -1,0 +1,14 @@
+.store-section {
+  margin-bottom: 60px;
+}
+
+.store-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-item {
+  margin: 2px;
+}

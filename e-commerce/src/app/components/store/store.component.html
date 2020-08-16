@@ -1,0 +1,10 @@
+<section class="store-section">
+  <header>
+    <h2 class="page-section-title">Shop our newest arrivals</h2>
+  </header>
+  <div class="store-items">
+    <div class="store-item" *ngFor="let product of products; index as productId">
+      <app-product [product]="product" [productId]="productId"></app-product>
+    </div>
+  </div>
+</section>

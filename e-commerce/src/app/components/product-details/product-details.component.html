@@ -1,0 +1,31 @@
+<section class="product-details" id="product-details">
+  <header>
+    <h2 class="page-section-title">Product Details</h2>
+  </header>
+  <div *ngIf="product">
+    <img *ngIf="product.image" class="product-details-image" [src]="product.image" alt="product-image">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price | currency }}</h4>
+    <p>{{ product.description }}</p>
+    <div class="product-buttons">
+      <button class="button" (click)="share(product.name)">
+        Share
+      </button>
+      <app-product-alerts [product]="product" (notify)="onNotify(product.name)">
+      </app-product-alerts>
+      <div class="product-buy-section">
+        <mat-form-field class="product-quantity-form" appearance="outline">
+          <mat-label>Quantity</mat-label>
+          <mat-select name="productQuantity" [(ngModel)]="productQuantity">
+            <mat-option [value]="i+1" *ngFor="let quantity of [].constructor(product.stock); let i = index">{{i+1}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button class="add-to-cart-button" mat-fab color="primary" (click)="addToCart()" matTooltip="Add to cart"
+          matTooltipPosition="right" matTooltipClass="tooltip-red">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
