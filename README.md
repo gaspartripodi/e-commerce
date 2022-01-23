@@ -1,1 +1,1 @@
-ecoshopweb.herokuapp.com
+myecoshop.herokuapp.com
