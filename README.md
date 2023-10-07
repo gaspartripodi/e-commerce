@@ -1,1 +1,0 @@
-myecoshop.herokuapp.com
